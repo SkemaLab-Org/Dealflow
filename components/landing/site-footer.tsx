@@ -1,3 +1,4 @@
+import { CurrentYear } from "./current-year";
 import { Logo } from "./logo";
 
 const groups = [
@@ -34,7 +35,7 @@ export function SiteFooter() {
         </nav>
       </div>
       <div className="mx-auto max-w-6xl border-t border-border/60 px-6 py-6">
-        <p className="font-mono text-xs text-muted">&copy; {new Date().getFullYear()} Dealflow, Inc. All rights reserved.</p>
+        <p className="font-mono text-xs text-muted">&copy; <CurrentYear /> Dealflow, Inc. All rights reserved.</p>
       </div>
     </footer>
   );
