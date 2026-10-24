@@ -1,5 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export function CurrentYear() {
-  return <span suppressHydrationWarning>{new Date().getFullYear()}</span>;
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  return <span>{year ?? ""}</span>;
 }
